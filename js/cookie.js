@@ -61,12 +61,14 @@ class Cookie {
 
   deselectionnee() {
     //console.log('est déselectionné');
+    if(this.type !== null){
     // on change l'image
     this.htmlImage.src = Cookie.urlsImagesNormales[this.type];
     // On change la class (CSS) de ce cookie
     this.htmlImage.classList.remove("cookies-selected");
     // On change l'état de la case
     this.setSelection(false);
+    }
   }
 
   static swapCookies(c1, c2) {
